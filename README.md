@@ -49,33 +49,6 @@ npm run preview   # serve o build localmente
 npm run lint      # análise estática
 ```
 
-### Setup inicial do projeto (caso ainda não exista)
-
-```bash
-npm create vite@latest sisged-web -- --template react-ts
-cd sisged-web
-npm install react-router-dom @tanstack/react-query @supabase/supabase-js @xyflow/react lucide-react
-npm install -D tailwindcss @tailwindcss/vite
-```
-
-Em `vite.config.ts`:
-
-```ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
-```
-
-Em `src/index.css`:
-
-```css
-@import "tailwindcss";
-```
-
 ## Arquitetura do front
 
 O Web App é uma SPA organizada em três grupos, conforme o diagrama de componentes (C4 nível 3):
